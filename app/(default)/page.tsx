@@ -19,9 +19,9 @@ const Home: React.FC = () => {
         <div className="relative z-10">
           {" "}
           {/* Asegúrate de que el contenido principal esté en un contenedor con z-index más alto */}
-          <Hero />
-          <BusinessCategories />
-          <AboutUs />
+          {/* <Hero /> */}
+          {/* <BusinessCategories /> */}
+          {/* <AboutUs /> */}
           <Cta />
         </div>
       </div>
