@@ -8,20 +8,18 @@ import Hero from "@/components/hero-home";
 import BusinessCategories from "@/components/business-categories";
 import AboutUs from "@/components/about";
 import Cta from "@/components/cta";
-// import LottieBackground from "@/components/ui/LottieBackground"; // Importa el componente LottieBackground
+import LottieBackground from "@/components/ui/LottieBackground"; // Importa el componente LottieBackground
 import React from "react";
 
 const Home: React.FC = () => {
   return (
     <>
       <div className="relative">
-        {/* <LottieBackground /> Agrega el componente LottieBackground */}
+        <LottieBackground />
         <div className="relative z-10">
-          {" "}
-          {/* Asegúrate de que el contenido principal esté en un contenedor con z-index más alto */}
-          {/* <Hero /> */}
-          {/* <BusinessCategories /> */}
-          {/* <AboutUs /> */}
+          <Hero />
+          <BusinessCategories />
+          <AboutUs />
           <Cta />
         </div>
       </div>
