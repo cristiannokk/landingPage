@@ -1,19 +1,25 @@
 import Image from "next/image";
+import NextLogo from "@/public/images/nextjs-logo.svg";
+import ReactLogo from "@/public/images/react-logo.svg";
+import DotNetLogo from "@/public/images/dotnet-logo.svg";
+import AntDLogo from "@/public/images/ant-design.svg";
+import SqlLogo from "@/public/images/sql.svg";
+import CSSLogo from "@/public/images/css-logo.svg";
 import Logo01 from "@/public/images/logo-01.svg";
 import Logo02 from "@/public/images/logo-02.svg";
 import Logo03 from "@/public/images/logo-03.svg";
 import Logo04 from "@/public/images/logo-04.svg";
 import Logo05 from "@/public/images/logo-05.svg";
-import Logo06 from "@/public/images/logo-06.svg";
-import Logo07 from "@/public/images/logo-07.svg";
-import Logo08 from "@/public/images/logo-08.svg";
-import Logo09 from "@/public/images/logo-09.svg";
 
 export default function BusinessCategories() {
   return (
-    <section>
+    <section className="hidden md:block">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="pb-12 md:pb-20">
+        <div
+          data-aos="zoom-y-out"
+          data-aos-delay={150}
+          className="pb-12 md:pb-8"
+        >
           {/* Tab panels */}
           <div className="relative flex h-[324px] items-center justify-center">
             {/* Small blue dots */}
@@ -182,7 +188,7 @@ export default function BusinessCategories() {
                     src={Logo01}
                     width={32}
                     height={32}
-                    alt="Logo 01"
+                    alt="Next.js Logo"
                   />
                 </div>
               </div>
@@ -195,10 +201,10 @@ export default function BusinessCategories() {
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
                         className="relative"
-                        src={Logo02}
+                        src={ReactLogo}
                         width={23}
                         height={22}
-                        alt="Logo 02"
+                        alt="React.js Logo"
                       />
                     </div>
                   </div>
@@ -208,10 +214,10 @@ export default function BusinessCategories() {
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
                         className="relative"
-                        src={Logo03}
+                        src={DotNetLogo}
                         width={22}
                         height={22}
-                        alt="Logo 03"
+                        alt=".NET Logo"
                       />
                     </div>
                   </div>
@@ -221,7 +227,7 @@ export default function BusinessCategories() {
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
                         className="relative"
-                        src={Logo04}
+                        src={NextLogo}
                         width={24}
                         height={22}
                         alt="Logo 04"
@@ -234,7 +240,7 @@ export default function BusinessCategories() {
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
                         className="relative"
-                        src={Logo05}
+                        src={CSSLogo}
                         width={25}
                         height={25}
                         alt="Logo 05"
@@ -247,10 +253,10 @@ export default function BusinessCategories() {
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
                         className="relative"
-                        src={Logo06}
+                        src={Logo01}
                         width={20}
                         height={18}
-                        alt="Logo 06"
+                        alt="Logo 01"
                       />
                     </div>
                   </div>
@@ -260,10 +266,10 @@ export default function BusinessCategories() {
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
                         className="relative"
-                        src={Logo07}
+                        src={Logo02}
                         width={25}
                         height={25}
-                        alt="Logo 07"
+                        alt="Logo 02"
                       />
                     </div>
                   </div>
@@ -273,10 +279,10 @@ export default function BusinessCategories() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200/60 bg-white shadow-lg">
                       <Image
                         className="relative"
-                        src={Logo08}
+                        src={AntDLogo}
                         width={20}
                         height={20}
-                        alt="Logo 08"
+                        alt="Logo 03"
                       />
                     </div>
                   </div>
@@ -286,10 +292,10 @@ export default function BusinessCategories() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200/60 bg-white shadow-lg">
                       <Image
                         className="relative"
-                        src={Logo09}
+                        src={SqlLogo}
                         width={21}
                         height={13}
-                        alt="Logo 09"
+                        alt="Logo 04"
                       />
                     </div>
                   </div>

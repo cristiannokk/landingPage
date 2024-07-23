@@ -9,15 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dotlottie/dotlottie-js": "^0.8.0",
     "@headlessui/react": "^2.0.4",
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
     "aos": "^3.0.0-beta.6",
+    "lottie-web": "^5.12.2",
     "next": "^14.0.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-lottie-player": "^2.0.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
