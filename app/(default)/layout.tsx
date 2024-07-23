@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,14 +19,12 @@ export default function DefaultLayout({
       duration: 700,
       easing: "ease-out-cubic",
     });
-  });
+  }, []); // Arreglo de dependencias vacío
 
   return (
     <>
       <Header />
-
       <main className="grow">{children}</main>
-
       <Footer border={true} />
     </>
   );

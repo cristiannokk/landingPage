@@ -1,8 +1,9 @@
 import Image from "next/image";
 
 import Stripes from "@/public/images/stripes.svg";
+import React from "react";
 
-export default function PageIllustration() {
+const  PageIllustration: React.FC = () => {
   return (
     <>
       {/* Stripes illustration */}
@@ -40,3 +41,5 @@ export default function PageIllustration() {
     </>
   );
 }
+
+export default PageIllustration
