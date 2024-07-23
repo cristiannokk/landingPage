@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Lottie from "react-lottie-player";
 import Animation from "@/public/Animation3json.json";
+import React from "react";
 
-export default function AboutUs() {
+const AboutUs: React.FC = () => {
   return (
     <section>
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
@@ -34,4 +35,5 @@ export default function AboutUs() {
       </div>
     </section>
   );
-}
+};
+export default AboutUs;

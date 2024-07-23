@@ -10,8 +10,9 @@ import Logo02 from "@/public/images/logo-02.svg";
 import Logo03 from "@/public/images/logo-03.svg";
 import Logo04 from "@/public/images/logo-04.svg";
 import Logo05 from "@/public/images/logo-05.svg";
+import React from "react";
 
-export default function BusinessCategories() {
+const BusinessCategories: React.FC = () => {
   return (
     <section className="hidden md:block">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -307,4 +308,6 @@ export default function BusinessCategories() {
       </div>
     </section>
   );
-}
+};
+
+export default BusinessCategories

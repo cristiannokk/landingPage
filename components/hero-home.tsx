@@ -6,7 +6,7 @@ import PageIllustration from "@/components/page-illustration";
 import Lottie from "react-lottie-player";
 import Animation from "@/public/Animation.json";
 
-export default function HeroHome() {
+const HeroHome: React.FC = () => {
   return (
     <section className="relative">
       <PageIllustration />
@@ -199,3 +199,5 @@ export default function HeroHome() {
     </section>
   );
 }
+
+export default HeroHome;

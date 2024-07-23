@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
+import React from "react";
 
-export default function Cta() {
+const Cta: React.FC = () => {
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -31,7 +32,7 @@ export default function Cta() {
           </div>
           <div className="px-4 py-12 md:px-12 md:py-20">
             <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.700/.7),transparent)1] md:mb-12 md:text-4xl">
-             Crea tu próximo proyecto con TriDevs Solution
+              Crea tu próximo proyecto con TriDevs Solution
             </h2>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
               <a
@@ -51,4 +52,6 @@ export default function Cta() {
       </div>
     </section>
   );
-}
+};
+
+export default Cta;
