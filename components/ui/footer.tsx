@@ -45,7 +45,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   +54 9 2616222196
                 </Link>
               </li>
-              <li className="flex items-center space-x-2">
+              {/* <li className="flex items-center space-x-2">
                 <FaWhatsapp className="flex-shrink-0 h-6 w-6 text-gray-600" />
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
@@ -53,8 +53,8 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 >
                   +54 9 2613065822
                 </Link>
-              </li>
-              <li className="flex items-center space-x-2">
+              </li> */}
+              {/* <li className="flex items-center space-x-2">
                 <FaWhatsapp className="flex-shrink-0 h-6 w-6 text-gray-600" />
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
@@ -62,7 +62,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 >
                   +54 9 2616839002
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
