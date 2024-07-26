@@ -4,9 +4,6 @@ const nextConfig = {
   reactStrictMode: false,
   transpilePackages: ['antd'],
   swcMinify: true,
-  compiler: {
-    emotion: true,
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
