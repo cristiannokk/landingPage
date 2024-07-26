@@ -120,7 +120,7 @@ const Cta: React.FC = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
           <div className="bg-white p-8 rounded-lg shadow-xl max-w-md w-full">
             <h3 className="text-2xl font-bold mb-4 text-gray-900">Contáctanos</h3>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={()=> handleSubmit(onSubmit)} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
                 <input

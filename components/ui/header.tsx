@@ -9,15 +9,15 @@ export default function Header() {
   const [top, setTop] = useState<boolean>(true);
 
   // detect whether user has scrolled the page down by 10px
-  const scrollHandler = () => {
-    window.pageYOffset > 10 ? setTop(false) : setTop(true);
-  };
+  // const scrollHandler = () => {
+  //   window.pageYOffset > 10 ? setTop(false) : setTop(true);
+  // };
 
-  useEffect(() => {
-    scrollHandler();
-    window.addEventListener("scroll", scrollHandler);
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, [top]);
+  // useEffect(() => {
+    // scrollHandler();
+  //   window.addEventListener("scroll", scrollHandler);
+  //   return () => window.removeEventListener("scroll", scrollHandler);
+  // }, [top]);
 
   return (
     <header className="fixed top-2 z-20 w-full md:top-6">
