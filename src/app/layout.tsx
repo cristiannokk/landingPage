@@ -16,10 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
-      <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+      <body className={inter.className}>
+        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}
         </div>
+      </body>
     </html>
   );
 }
