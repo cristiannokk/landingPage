@@ -10,7 +10,7 @@ import { toast, Toaster } from 'react-hot-toast';
 
 interface FormData {
   name: string;
-  phone: string;
+  phone: number;
   email: string;
   message: string;
 }
@@ -18,14 +18,22 @@ interface FormData {
 const Cta: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const { register, handleSubmit, reset } = useForm<FormData>();
+  const { register, handleSubmit, reset, formState: { isValid, isDirty } } = useForm<FormData>({
+    mode: 'onChange',
+    defaultValues: {
+      name: '',
+      phone: 0,
+      email: '',
+      message: ''
+    }
+  });
 
   const onSubmit = (data: FormData) => {
     setLoading(true);
 
     const formattedData = {
       name: data.name,
-      phone: data.phone,
+      phone: data.phone.toString(),
       email: data.email,
       message: data.message,
     };
@@ -49,8 +57,7 @@ const Cta: React.FC = () => {
     })
     .catch(() => {
       toast.error("Tuvimos un problema al enviar el mensaje, te proporcionamos los canales de teléfonos para que nos llames.", {
-        duration: 5000, 
-        
+        duration: 5000,
         style: {
           background: 'red',
           color: 'white',
@@ -97,21 +104,20 @@ const Cta: React.FC = () => {
           </div>
           <div className="px-4 py-12 md:px-12 md:py-20">
             <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.700/.7),transparent)1] md:mb-12 md:text-4xl">
-              Crea tu próximo proyecto con TriDevs Solution
+              Crea tu próximo proyecto con <span style={{ color: '#4A90E2' }}>Tridevs</span> Solutions
             </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <button
-                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                onClick={() => setModalOpen(true)}
-              >
-                <span className="relative inline-flex items-center">
-                  Comenzar
-                  <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
-                  </span>
-                </span>
-              </button>
-            </div>
+            <div className="flex justify-center">
+  <button
+    type="button"
+    className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow flex items-center disabled:opacity-50"
+    disabled={loading}
+    onClick={() => setModalOpen(true)}
+  >
+    <span className="relative inline-flex items-center">
+      Contáctanos
+    </span>
+  </button>
+</div>
           </div>
         </div>
       </div>
@@ -119,8 +125,8 @@ const Cta: React.FC = () => {
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
           <div className="bg-white p-8 rounded-lg shadow-xl max-w-md w-full">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contáctanos</h3>
-            <form onSubmit={()=> handleSubmit(onSubmit)} className="space-y-4">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Completa los campos</h3>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
                 <input
@@ -134,7 +140,7 @@ const Cta: React.FC = () => {
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
                 <input
                   id="phone"
-                  type="tel"
+                  type="number"
                   {...register("phone", { required: true })}
                   className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
                 />
@@ -160,7 +166,7 @@ const Cta: React.FC = () => {
                 <button
                   type="submit"
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow flex items-center disabled:opacity-50"
-                  disabled={loading}
+                  disabled={loading || !isDirty || !isValid}
                 >
                   {loading ? (
                     <ClipLoader color="#ffffff" size={20} />

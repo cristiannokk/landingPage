@@ -11,6 +11,7 @@
   "dependencies": {
     "@dotlottie/dotlottie-js": "^0.8.0",
     "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",

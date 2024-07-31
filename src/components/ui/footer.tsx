@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Logo from "./logo";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -13,21 +12,20 @@ export default function Footer({ border = false }: { border?: boolean }) {
         >
           {/* 1st block */}
           <div className="sm:col-span-12 lg:col-span-4">
-            <div className="space-y-2">
-              <div>
-                <Logo />
-              </div>
+            <div className="flex flex-col items-center justify-center text-center sm:items-start sm:text-left">
+              
               <div className="text-sm text-gray-600">
-                &copy; TriDevs Solution - All rights reserved.
+                &copy; Tridevs Solutions - All rights reserved.
               </div>
             </div>
           </div>
 
+
           {/* 5th block */}
           <div className="sm:col-span-12 lg:col-span-4 lg:col-start-10 lg:col-end-13">
-            <h3 className="text-sm font-medium">Contact</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center space-x-2">
+            <h3 className="text-sm font-medium text-center sm:text-left">Contacto</h3>
+            <ul className="space-y-2 text-sm text-center sm:text-left">
+              <li className="flex items-center justify-center sm:justify-start space-x-2">
                 <HiOutlineMail className="flex-shrink-0 h-6 w-6 text-gray-600" />
                 <Link
                   className="text-gray-600 transition hover:text-gray-900 break-all"
@@ -36,7 +34,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   tridevs.solutions@gmail.com
                 </Link>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex items-center justify-center sm:justify-start space-x-2">
                 <FaWhatsapp className="flex-shrink-0 h-6 w-6 text-gray-600" />
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
@@ -45,24 +43,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   +54 9 2616222196
                 </Link>
               </li>
-              {/* <li className="flex items-center space-x-2">
-                <FaWhatsapp className="flex-shrink-0 h-6 w-6 text-gray-600" />
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="https://wa.me/2613065822"
-                >
-                  +54 9 2613065822
-                </Link>
-              </li> */}
-              {/* <li className="flex items-center space-x-2">
-                <FaWhatsapp className="flex-shrink-0 h-6 w-6 text-gray-600" />
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="https://wa.me/2616839002"
-                >
-                  +54 9 2616839002
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>
@@ -85,6 +65,35 @@ export default function Footer({ border = false }: { border?: boolean }) {
           <div className="h-40 w-40 lg:h-56 lg:w-56 rounded-full border-[20px] border-blue-700 blur-[80px]"></div>
         </div>
       </div>
+
+      {/* Mobile adjustments */}
+      <style jsx>{`
+        @media (max-width: 640px) {
+          footer .mx-auto {
+            max-width: 100%;
+            padding: 0 1rem;
+          }
+
+          footer .grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+
+          footer .lg\\:col-span-4 {
+            text-align: center;
+            margin-bottom: 2rem;
+          }
+
+          footer .lg\\:col-start-10 {
+            text-align: center;
+            margin-bottom: 2rem;
+          }
+
+          footer .text-center {
+            text-align: center;
+          }
+        }
+      `}</style>
     </footer>
   );
 }
