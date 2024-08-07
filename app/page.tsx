@@ -4,7 +4,6 @@ import {
   Stats,
   About,
   Services,
-  CardDeal,
   Testimonials,
   Clients,
   CTA,
@@ -29,7 +28,6 @@ export default function Home() {
           {/* <Stats /> */}
           <Services />
           <About />
-          {/* <CardDeal /> */}
           {/* <Testimonials /> */}
           <Clients />
           <CTA />

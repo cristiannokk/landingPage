@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import About from "./About";
-import CardDeal from "./CardDeal";
 import Services from "./Services";
 import Clients from "./Clients";
 import CTA from "./CTA";
@@ -12,7 +11,6 @@ import Hero from "./Hero";
 export {
   Navbar,
   About,
-  CardDeal,
   Services,
   Clients,
   CTA,
