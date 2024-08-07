@@ -1,10 +1,8 @@
 import {
   Navbar,
   Hero,
-  Stats,
   About,
   Services,
-  Testimonials,
   Clients,
   CTA,
   Footer,
@@ -25,10 +23,8 @@ export default function Home() {
       </section>
       <section className=" bg-primary paddingX flexStart">
         <section className="boxWidth">
-          {/* <Stats /> */}
           <Services />
           <About />
-          {/* <Testimonials /> */}
           <Clients />
           <CTA />
           <Footer />

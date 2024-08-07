@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { navVariants } from "../styles/animations";
 import Image from "next/image";
-import { close, logo, menu } from "../../public";
+import { close, logo, menu } from "../../../public";
 import { navLinks } from "../constants";
 
 const Navbar = () => {

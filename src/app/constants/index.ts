@@ -14,7 +14,7 @@ import {
     send,
     shield,
     star,
-  } from "../../public";
+  } from "../../../public";
   
   export const navLinks = [
     {
