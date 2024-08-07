@@ -44,7 +44,7 @@ const CTA: React.FC = () => {
       "service_6e276su",
       "template_udn8lah",
       formattedData as Record<string, unknown>,
-      "_WWvbFu8YWQghZgOo"
+      "BTFWilOY5yiSKpieq"
     )
     .then(() => {
       toast.success("Mensaje enviado exitosamente! Pronto se pondrán en contacto contigo los chicos de TriDevs Solutions.", {
